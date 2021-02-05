@@ -4,3 +4,7 @@ android
 test
 .idea
 .vscode
+.DS_Store
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
