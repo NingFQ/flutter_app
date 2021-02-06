@@ -26,15 +26,7 @@ class WidgetTestIndex extends StatelessWidget {
                   Navigator.pushNamed(context,'tabStyleTest');
                 },
                 child: Text(
-                  'Tab Test 1'
-                ),
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context,'tabStyleTest2');
-                },
-                child: Text(
-                  'Tab Test 2'
+                  'Tab Test'
                 ),
               ),
               RaisedButton(

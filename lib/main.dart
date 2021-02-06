@@ -11,16 +11,9 @@ import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
 import 'dart:async';
 
-import 'common/theme/theme_color.dart';
 import 'common/untils/network_class.dart';
 
-void main() {
-  runApp(MyApp());
-  // SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
-  //   statusBarColor: Colors.transparent,  //设置为透明
-  // );
-  // SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-}
+void main ()=> runApp(MyApp());
 
 
 class MyApp extends StatelessWidget {
@@ -116,8 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text('首页')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.loyalty),
-              title: Text('商铺')
+              icon: Icon(Icons.view_list),
+              title: Text('分类')
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_shopping_cart),

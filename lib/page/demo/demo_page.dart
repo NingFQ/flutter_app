@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/widgets/bottom_sheet.dart';
 import 'package:flutter_app/common/widgets/network_dialog.dart';
 
 class DemoPage extends StatefulWidget {
@@ -16,24 +17,13 @@ class _DemoPageState extends State<DemoPage> {
           actionsIconTheme: IconThemeData(color: Colors.white),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.add,color: Colors.white,),
+              icon: Icon(Icons.add,color: Colors.black,size: 30,),
               onPressed: () async{
-                Future.wait([
-                  Future.delayed(new Duration(seconds: 2),() {
-                    return 'world';
-                  }),
-                  Future.delayed(new Duration(seconds: 2),() {
-                    return 'hello';
-                  }),
-                ]).then((data){
-                  print(data);
-                });
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.apps,color: Colors.white,),
-              onPressed: () {
-
+                showBottomBar(
+                  context,
+                  [{'key': 'a','title': '操作1'},{'key': 'a','title': '操作1'}],
+                  callBack: actionCallBack
+                );
               },
             ),
           ],
@@ -81,4 +71,10 @@ class _DemoPageState extends State<DemoPage> {
         )
     );
   }
+
+  //  操作回调
+  void actionCallBack(item) {
+    print('item====$item');
+  }
+
 }

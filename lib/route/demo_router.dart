@@ -9,7 +9,6 @@ import 'package:flutter_app/page/demo/packages_test/components/photo_view.dart';
 import 'package:flutter_app/page/demo/route_test/route_test1.dart';
 import 'package:flutter_app/page/demo/widget_test/components/scroll_stack.dart';
 import 'package:flutter_app/page/demo/widget_test/components/tab_style.dart';
-import 'package:flutter_app/page/demo/widget_test/components/tab_style2.dart';
 import 'package:flutter_app/page/demo/widget_test/components/text_rich.dart';
 import 'package:flutter_app/page/demo/widget_test/widget_test_index.dart';
 import 'package:flutter_app/page/demo/packages_test/components/english_word.dart';
@@ -28,6 +27,5 @@ Map<String,WidgetBuilder> demoRoutes = {
   'photoView': (content,{arguments}) => new PhotoView(),// 图片预览
   'networkMonitor': (content,{arguments}) => new NetworkMonitor(),// 网络监听
   'tabStyleTest': (content,{arguments}) => new TabStyleTest(),
-  'tabStyleTest2': (content,{arguments}) => new TabStyleTest2(),
   'scrollStack': (context,{arguments}) => new ScrollStack(),
 };

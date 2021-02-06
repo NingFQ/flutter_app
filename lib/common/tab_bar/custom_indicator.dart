@@ -35,7 +35,6 @@ class _ACETabBarIndicatorPainter extends BoxPainter {
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
-    print('aaaa===${offset.dx}');
     double _height = height ?? _kIndicatorHeight;
     Paint _paint = Paint()
       ..color = color ?? _kIndicatorColor

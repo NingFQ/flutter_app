@@ -13,6 +13,7 @@ class CustomDialog extends Dialog {
 
   final Function callback; // 回调函数
 
+
   CustomDialog({
     Key key,
     @required this.buttons,
@@ -22,6 +23,9 @@ class CustomDialog extends Dialog {
   @override
 
   Widget build(BuildContext context) {
+
+    final double paddingBottom = MediaQuery.of(context).padding.bottom;
+
     // 公共样式
     final itemStyle = TextStyle(
         fontSize: 15,
@@ -37,7 +41,8 @@ class CustomDialog extends Dialog {
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 65,
+        padding: EdgeInsets.only(bottom: paddingBottom),
+        height: 65 + paddingBottom,
         decoration: BoxDecoration(
             border: Border(
                 top: BorderSide(
@@ -101,7 +106,7 @@ class CustomDialog extends Dialog {
     return Stack(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.only(bottom: 65),
+          padding: EdgeInsets.only(bottom: 65 + paddingBottom),
           child: SingleChildScrollView(
             child: Column(
                 mainAxisSize: MainAxisSize.min,

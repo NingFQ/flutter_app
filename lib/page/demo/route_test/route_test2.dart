@@ -12,7 +12,7 @@ class RouteTest2 extends StatelessWidget {
       ),
       body: Container(
         child: RaisedButton(
-          onPressed: () => Navigator.pop(context,'Route2返回参数'),
+          onPressed: () => Navigator.pop(context,'Route2返回的参数'),
           child: Text('$text'),
         ),
       ),

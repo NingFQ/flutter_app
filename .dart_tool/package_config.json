@@ -104,6 +104,12 @@
       "languageVersion": "2.3"
     },
     {
+      "name": "flutter_screenutil",
+      "rootUri": "file:///Users/ningfangqiang/work/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_screenutil-4.0.3+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/ningfangqiang/work/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -248,7 +254,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-02-06T07:08:20.680056Z",
+  "generated": "2021-02-06T10:08:08.208254Z",
   "generator": "pub",
   "generatorVersion": "2.7.2"
 }
