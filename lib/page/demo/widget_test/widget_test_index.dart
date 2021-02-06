@@ -45,6 +45,14 @@ class WidgetTestIndex extends StatelessWidget {
                   'Scroll Stack'
                 ),
               ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context,'myThemeApp');
+                },
+                child: Text(
+                    'Theme Data'
+                ),
+              ),
             ],
           )
       )

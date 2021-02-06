@@ -49,7 +49,7 @@ class _DemoPageState extends State<DemoPage> {
                     Navigator.pushNamed(context,'untilPage');
                   },
                   child: Text(
-                      '函数'
+                      '方法'
                   ),
                 ),
                 RaisedButton(
@@ -70,8 +70,7 @@ class _DemoPageState extends State<DemoPage> {
                 ),
                 RaisedButton(
                   onPressed: () {
-                    // Navigator.pushNamed(context,'widgetTestIndex');
-                    showNetWorkTip(context);
+                    Navigator.pushNamed(context,'widgetTestIndex');
                   },
                   child: Text(
                       '组件'

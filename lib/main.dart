@@ -1,5 +1,8 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_app/common/theme/theme_data.dart';
+import 'package:flutter_app/common/widgets/error_page.dart';
 import 'package:flutter_app/page/cart/cart_page.dart';
 import 'package:flutter_app/page/demo/demo_page.dart';
 import 'package:flutter_app/page/goods/goods_page.dart';
@@ -8,9 +11,17 @@ import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
 import 'dart:async';
 
+import 'common/theme/theme_color.dart';
 import 'common/untils/network_class.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+  // SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
+  //   statusBarColor: Colors.transparent,  //设置为透明
+  // );
+  // SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+}
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -21,11 +32,17 @@ class MyApp extends StatelessWidget {
       // debugShowMaterialGrid: true,
       // showSemanticsDebugger: true,
       // showPerformanceOverlay: true,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      // initialRoute: '/',
+      // theme: AppThemeColor.getThemeData('blue'),
+      theme: AppThemeData.lightTheme,
+      initialRoute: '/',
       home: MyHomePage(),
+      onUnknownRoute: (RouteSettings setting) {
+        String name = setting.name;
+        print("未匹配到路由:$name");
+        return new MaterialPageRoute(builder: (context) {
+          return ErrorPage();
+        });
+      },
       // routes: DemoRouter.demoRoutes,
       onGenerateRoute: DemoRouter().onGenerateRoute,
       navigatorKey: DemoRouter.navigatorKey,
@@ -43,7 +60,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  int currentIndex = 0;
+  int currentIndex = 4;
   
   List pages = [
     IndexPage(),
@@ -90,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: currentIndex,
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.red,
+        selectedItemColor: Colors.deepOrange,
         type: BottomNavigationBarType.shifting,
         showUnselectedLabels: true,
         items: [

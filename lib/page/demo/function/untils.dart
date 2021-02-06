@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/page/demo/function/classTest.dart';
+import 'package:flutter_app/page/demo/function/components/class_test.dart';
 
 class UntilsPage extends StatefulWidget {
   @override
@@ -16,6 +16,8 @@ class _UntilsPageState extends State<UntilsPage> {
       body: Container(
         padding: EdgeInsets.all(10),
         child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
           children: <Widget>[
             RaisedButton(
               onPressed: () {
@@ -30,6 +32,14 @@ class _UntilsPageState extends State<UntilsPage> {
               },
               child: Text(
                 'Class Test'
+              ),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'eventTest');
+              },
+              child: Text(
+                  '事件广播'
               ),
             )
           ],
