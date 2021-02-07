@@ -64,9 +64,9 @@ class CustomDialog extends Dialog {
         btnWidgetList.add(
             GestureDetector(
               child: Container(
+                width: MediaQuery.of(context).size.width,
                 height: 55,
                 decoration: BoxDecoration(
-                  // color: Colors.blue,
                     border: Border(
                         bottom: BorderSide(
                           width: 0.5,

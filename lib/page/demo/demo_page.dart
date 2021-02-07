@@ -14,14 +14,16 @@ class _DemoPageState extends State<DemoPage> {
         appBar: AppBar(
           title: Text('DEMO'),
           centerTitle: true,
-          actionsIconTheme: IconThemeData(color: Colors.white),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.add,color: Colors.black,size: 30,),
+              icon: Icon(Icons.add,size: 30,),
               onPressed: () async{
                 showBottomBar(
                   context,
-                  [{'key': 'a','title': '操作1'},{'key': 'a','title': '操作1'}],
+                  [
+                    {'key': 'a','title': '照片','viceTitle': '（拍照或从手机相册选取）'},
+                    {'key': 'a','title': '录像'}
+                  ],
                   callBack: actionCallBack
                 );
               },
