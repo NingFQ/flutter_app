@@ -114,3 +114,7 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+lib/.DS_Store
+lib/page/demo/function/.DS_Store
+lib/page/demo/.DS_Store
+lib/page/.DS_Store
