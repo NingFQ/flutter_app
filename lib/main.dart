@@ -9,6 +9,7 @@ import 'package:flutter_app/page/goods/goods_page.dart';
 import 'package:flutter_app/page/index/index_page.dart';
 import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'dart:async';
 
 import 'common/untils/network_class.dart';
@@ -39,6 +40,9 @@ class MyApp extends StatelessWidget {
       // routes: DemoRouter.demoRoutes,
       onGenerateRoute: DemoRouter().onGenerateRoute,
       navigatorKey: DemoRouter.navigatorKey,
+      builder: (BuildContext context, Widget child) {
+        return FlutterSmartDialog(child: child);
+      },
     );
   }
 }
@@ -87,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  dispose() {
+  void dispose() {
     super.dispose();
     subscription.cancel();
   }

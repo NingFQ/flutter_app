@@ -31,8 +31,8 @@ class TextRichTest extends StatelessWidget {
                 return RadialGradient(
                   center: Alignment.topLeft,
                   radius: 1.0,
-                  colors: <Color>[Colors.yellow, Colors.deepOrange],
-                  tileMode: TileMode.mirror,
+                  // colors: <Color>[Colors.yellow, Colors.deepOrange],
+                  // tileMode: TileMode.mirror,
                 ).createShader(bounds);
               },
               blendMode: BlendMode.srcATop,

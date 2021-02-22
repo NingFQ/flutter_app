@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/common/img_view/img_view.dart';
+import 'package:flutter_app/common/img_view/img_view_SimpleScreen.dart';
 import 'package:photo_view/photo_view.dart';
 
 class PhotoView extends StatefulWidget {

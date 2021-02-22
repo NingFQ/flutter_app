@@ -37,6 +37,14 @@ class PackagesTest extends StatelessWidget {
                 '网络监听'
               ),
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context,'smartDialog');
+              },
+              child: Text(
+                'smart_dialog'
+              ),
+            ),
           ],
         )
       )
