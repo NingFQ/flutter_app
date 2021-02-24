@@ -27,7 +27,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'englishWord': (content,{arguments}) => new EnglishWord(),
   'photoView': (content,{arguments}) => new PhotoView(),// 图片预览
   'networkMonitor': (content,{arguments}) => new NetworkMonitor(),// 网络监听
-  'smartDialog': (content,{arguments}) => new SmartDialogWidget(),// smart dialog
+  // 'smartDialog': (content,{arguments}) => new SmartDialogWidget(),// smart dialog
 
   'widgetTestIndex': (content,{arguments}) => new WidgetTestIndex(),// 组件测试
   'tabStyleTest': (content,{arguments}) => new TabStyleTest(),

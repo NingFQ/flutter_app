@@ -21,7 +21,6 @@ class CustomDialog extends Dialog {
   }) : super(key: key);
 
   @override
-
   Widget build(BuildContext context) {
 
     final double paddingBottom = MediaQuery.of(context).padding.bottom;

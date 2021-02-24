@@ -9,7 +9,9 @@ import 'package:flutter_app/page/goods/goods_page.dart';
 import 'package:flutter_app/page/index/index_page.dart';
 import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_screenutil/screenutil_init.dart';
+// import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'dart:async';
 
 import 'common/untils/network_class.dart';
@@ -19,30 +21,38 @@ void main ()=> runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+  final double flutterScreenWidth = 750;
+  final double flutterScreenHeight = 1334;
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      // debugShowMaterialGrid: true,
-      // showSemanticsDebugger: true,
-      // showPerformanceOverlay: true,
-      // theme: AppThemeColor.getThemeData('blue'),
-      theme: AppThemeData.lightTheme,
-      initialRoute: '/',
-      home: MyHomePage(),
-      onUnknownRoute: (RouteSettings setting) {
-        String name = setting.name;
-        print("未匹配到路由:$name");
-        return new MaterialPageRoute(builder: (context) {
-          return ErrorPage();
-        });
-      },
-      // routes: DemoRouter.demoRoutes,
-      onGenerateRoute: DemoRouter().onGenerateRoute,
-      navigatorKey: DemoRouter.navigatorKey,
-      builder: (BuildContext context, Widget child) {
-        return FlutterSmartDialog(child: child);
-      },
+    return ScreenUtilInit(
+      designSize: Size(flutterScreenWidth,flutterScreenHeight),
+      allowFontScaling: false,
+      builder: ()=> MaterialApp(
+        title: 'Flutter Demo',
+        // debugShowMaterialGrid: true,
+        // showSemanticsDebugger: true,
+        // showPerformanceOverlay: true,
+        // theme: AppThemeColor.getThemeData('blue'),
+        theme: AppThemeData.lightTheme,
+        initialRoute: '/',
+        home: MyHomePage(),
+        onUnknownRoute: (RouteSettings setting) {
+          String name = setting.name;
+          print("未匹配到路由:$name");
+          return new MaterialPageRoute(builder: (context) {
+            return ErrorPage();
+          });
+        },
+        // routes: DemoRouter.demoRoutes,
+        onGenerateRoute: DemoRouter().onGenerateRoute,
+        navigatorKey: DemoRouter.navigatorKey,
+        // builder: (BuildContext context, Widget child) {
+        //   return FlutterSmartDialog(child: child);
+        // },
+      )
     );
   }
 }
@@ -58,7 +68,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   int currentIndex = 4;
-  
+
   List pages = [
     IndexPage(),
     GoodsPage(),

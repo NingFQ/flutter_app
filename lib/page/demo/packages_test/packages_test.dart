@@ -42,7 +42,7 @@ class PackagesTest extends StatelessWidget {
                 Navigator.pushNamed(context,'smartDialog');
               },
               child: Text(
-                'smart_dialog'
+                '智能Toast'
               ),
             ),
           ],
