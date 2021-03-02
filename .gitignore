@@ -118,3 +118,6 @@ lib/.DS_Store
 lib/page/demo/function/.DS_Store
 lib/page/demo/.DS_Store
 lib/page/.DS_Store
+ios/Podfile
+*.lock
+.dart_tool/package_config.json

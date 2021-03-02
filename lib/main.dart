@@ -1,6 +1,5 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_app/common/theme/theme_data.dart';
 import 'package:flutter_app/common/widgets/error_page.dart';
 import 'package:flutter_app/page/cart/cart_page.dart';
@@ -9,9 +8,8 @@ import 'package:flutter_app/page/goods/goods_page.dart';
 import 'package:flutter_app/page/index/index_page.dart';
 import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
-// import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'dart:async';
 
 import 'common/untils/network_class.dart';
@@ -49,9 +47,9 @@ class MyApp extends StatelessWidget {
         // routes: DemoRouter.demoRoutes,
         onGenerateRoute: DemoRouter().onGenerateRoute,
         navigatorKey: DemoRouter.navigatorKey,
-        // builder: (BuildContext context, Widget child) {
-        //   return FlutterSmartDialog(child: child);
-        // },
+        builder: (BuildContext context, Widget child) {
+          return FlutterSmartDialog(child: child);
+        },
       )
     );
   }
@@ -85,16 +83,16 @@ class _MyHomePageState extends State<MyHomePage> {
     subscription = Connectivity().onConnectivityChanged.listen((ConnectivityResult result) async {
       switch (result) {
         case ConnectivityResult.wifi:
-          NewWork.networkType = 'wifi';
-          NewWork.networkConnect = true;
+          NetWork.networkType = 'wifi';
+          NetWork.networkConnect = true;
           break;
         case ConnectivityResult.mobile:
-          NewWork.networkType = 'mobile';
-          NewWork.networkConnect = true;
+          NetWork.networkType = 'mobile';
+          NetWork.networkConnect = true;
           break;
         case ConnectivityResult.none:
-          NewWork.networkType = 'none';
-          NewWork.networkConnect = false;
+          NetWork.networkType = 'none';
+          NetWork.networkConnect = false;
           break;
       }
     });

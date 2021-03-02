@@ -11,6 +11,7 @@ class RouteTest2 extends StatelessWidget {
         title: Text('路由2'),
       ),
       body: Container(
+        padding: EdgeInsets.all(10),
         child: RaisedButton(
           onPressed: () => Navigator.pop(context,'Route2返回的参数'),
           child: Text('$text'),

@@ -45,6 +45,22 @@ class PackagesTest extends StatelessWidget {
                 '智能Toast'
               ),
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context,'recordMp3Widget');
+              },
+              child: Text(
+                  '音频录制'
+              ),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context,'exampleApp');
+              },
+              child: Text(
+                  '音频播放'
+              ),
+            ),
           ],
         )
       )

@@ -18,6 +18,7 @@ class _RouteTest1State extends State<RouteTest1> {
         title: Text('路由1'),
       ),
       body: Container(
+        padding: EdgeInsets.all(10),
         child: RaisedButton(
           onPressed: () async{
             var result = await Navigator.push(context, MaterialPageRoute(
