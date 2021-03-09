@@ -134,6 +134,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "flutter_audio_recorder",
+      "rootUri": "file:///Users/ningfangqiang/work/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_audio_recorder-0.5.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "flutter_easyrefresh",
       "rootUri": "file:///Users/ningfangqiang/work/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-2.1.1",
       "packageUri": "lib/",
@@ -374,7 +380,7 @@
       "languageVersion": "2.2"
     }
   ],
-  "generated": "2021-02-26T07:23:33.204652Z",
+  "generated": "2021-03-08T09:02:11.616120Z",
   "generator": "pub",
   "generatorVersion": "2.10.5"
 }

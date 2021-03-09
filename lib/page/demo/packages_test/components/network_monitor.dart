@@ -16,7 +16,9 @@ class _NetworkMonitorState extends State<NetworkMonitor> {
   @override
   void initState() {
     super.initState();
+    firstInit();
     _connectivitySubscription = _connectivity.onConnectivityChanged.listen((ConnectivityResult result) async {
+      print('resul=========${result.toString()}');
       switch (result) {
         case ConnectivityResult.wifi:
         case ConnectivityResult.mobile:
@@ -30,6 +32,11 @@ class _NetworkMonitorState extends State<NetworkMonitor> {
     });
   }
 
+  void firstInit() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    setState(() => _connectionStatus = connectivityResult.toString());
+  }
+
   @override
   void dispose() {
     _connectivitySubscription.cancel();
@@ -41,7 +48,7 @@ class _NetworkMonitorState extends State<NetworkMonitor> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Connectivity example app'),
+        title: const Text('Connectivity'),
       ),
       body: Center(child: Text('Connection Status: $_connectionStatus')),
     );

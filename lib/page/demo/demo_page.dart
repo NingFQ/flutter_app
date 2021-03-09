@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/widgets/bottom_sheet.dart';
-import 'package:flutter_app/common/widgets/network_dialog.dart';
 
 class DemoPage extends StatefulWidget {
   @override

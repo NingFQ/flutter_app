@@ -85,14 +85,17 @@ class _MyHomePageState extends State<MyHomePage> {
         case ConnectivityResult.wifi:
           NetWork.networkType = 'wifi';
           NetWork.networkConnect = true;
+          NetWork.hideNetWorkHint();
           break;
         case ConnectivityResult.mobile:
           NetWork.networkType = 'mobile';
           NetWork.networkConnect = true;
+          NetWork.hideNetWorkHint();
           break;
         case ConnectivityResult.none:
           NetWork.networkType = 'none';
           NetWork.networkConnect = false;
+          NetWork.showNetWorkHint(context);
           break;
       }
     });

@@ -47,18 +47,18 @@ class PackagesTest extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context,'recordMp3Widget');
+                Navigator.pushNamed(context,'recordMp3AudioPlay');
               },
               child: Text(
-                  '音频录制'
+                  '音频录制record_mp3版'
               ),
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context,'exampleApp');
+                Navigator.pushNamed(context,'recorderAudioPlay');
               },
               child: Text(
-                  '音频播放'
+                  '音频录制recorder版'
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 
+import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -31,7 +32,26 @@ Widget buildToastWidget (context) {
     child: GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: () {
-        Navigator.pushNamed(context, 'aaa');
+        Navigator.pushNamed(context, 'noneWeb').then((value) => () async {
+          var connectivityResult = await (Connectivity().checkConnectivity());
+          switch (connectivityResult) {
+            case ConnectivityResult.wifi:
+              NetWork.networkType = 'wifi';
+              NetWork.networkConnect = true;
+              NetWork.hideNetWorkHint();
+              break;
+            case ConnectivityResult.mobile:
+              NetWork.networkType = 'mobile';
+              NetWork.networkConnect = true;
+              NetWork.hideNetWorkHint();
+              break;
+            case ConnectivityResult.none:
+              NetWork.networkType = 'none';
+              NetWork.networkConnect = false;
+              NetWork.showNetWorkHint(context);
+              break;
+          }
+        });
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 60.w, vertical: 100.w),
