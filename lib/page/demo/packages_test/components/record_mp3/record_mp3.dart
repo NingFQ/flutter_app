@@ -54,7 +54,7 @@ class _RecordMp3AudioPlayState extends State<RecordMp3AudioPlay> {
     _positionSubscription?.cancel();
     audioPlayer?.dispose();
     recordTimer?.cancel();
-    File(recordFilePath).delete();// 删除文件
+    deleteFile();
     print('销毁=======销毁');
     super.dispose();
   }
@@ -230,7 +230,7 @@ class _RecordMp3AudioPlayState extends State<RecordMp3AudioPlay> {
     bool s = RecordMp3.instance.stop();
     if (s) {
       setState(() {
-        File(recordFilePath).delete();// 删除文件
+        File(recordFilePath)?.delete();// 删除文件
         recordDuration = 0;// 录制时长清零
         reloadAudioPlayer();
       });
@@ -338,5 +338,13 @@ class _RecordMp3AudioPlayState extends State<RecordMp3AudioPlay> {
     setState(() {
       recordFilePath = sdPath + "/test.mp3";
     });
+  }
+
+  // 删除本地路径
+  void deleteFile() async {
+    bool res = await File(recordFilePath).exists();
+    if (res) {
+      File(recordFilePath).delete();
+    }
   }
 }
