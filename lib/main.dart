@@ -1,5 +1,6 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/provider/system_theme.dart';
 import 'package:flutter_app/common/theme/theme_data.dart';
 import 'package:flutter_app/common/widgets/error_page.dart';
 import 'package:flutter_app/page/cart/cart_page.dart';
@@ -10,15 +11,16 @@ import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:provider/provider.dart';
 import 'dart:async';
 
+import 'common/provider/cart_count.dart';
 import 'common/untils/network_class.dart';
 
 void main ()=> runApp(MyApp());
 
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
 
   final double flutterScreenWidth = 750;
   final double flutterScreenHeight = 1334;
@@ -28,32 +30,42 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(flutterScreenWidth,flutterScreenHeight),
       allowFontScaling: false,
-      builder: ()=> MaterialApp(
-        title: 'Flutter Demo',
-        // debugShowMaterialGrid: true,
-        // showSemanticsDebugger: true,
-        // showPerformanceOverlay: true,
-        // theme: AppThemeColor.getThemeData('blue'),
-        theme: AppThemeData.lightTheme,
-        initialRoute: '/',
-        home: MyHomePage(),
-        onUnknownRoute: (RouteSettings setting) {
-          String name = setting.name;
-          print("未匹配到路由:$name");
-          return new MaterialPageRoute(builder: (context) {
-            return ErrorPage();
-          });
-        },
-        // routes: DemoRouter.demoRoutes,
-        onGenerateRoute: DemoRouter().onGenerateRoute,
-        navigatorKey: DemoRouter.navigatorKey,
-        builder: (BuildContext context, Widget child) {
-          return FlutterSmartDialog(child: child);
-        },
+      builder: ()=> MultiProvider(
+        providers: [
+          ChangeNotifierProvider<CartCountProvider>( create: (_) => CartCountProvider(),),
+          ChangeNotifierProvider<SystemThemeProvider>( create: (_) => SystemThemeProvider(),),
+        ],
+        child: Consumer<SystemThemeProvider>(
+          builder: (context,systemTheme,_){
+            return MaterialApp(
+              title: 'Flutter Demo',
+              // debugShowMaterialGrid: true,
+              // showSemanticsDebugger: true,
+              // showPerformanceOverlay: true,
+              // theme: AppThemeColor.getThemeData('blue'),
+              theme: systemTheme.currentTheme,
+              initialRoute: '/',
+              home: MyHomePage(),
+              onUnknownRoute: (RouteSettings setting) {
+                String name = setting.name;
+                print("未匹配到路由:$name");
+                return new MaterialPageRoute(builder: (context) {
+                  return ErrorPage();
+                });
+              },
+              onGenerateRoute: DemoRouter().onGenerateRoute,
+              navigatorKey: DemoRouter.navigatorKey,
+              builder: (BuildContext context, Widget child) {
+                return FlutterSmartDialog(child: child);
+              },
+            );
+          },
+        )
       )
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {            
   MyHomePage({Key key, this.title}) : super(key: key);

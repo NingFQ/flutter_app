@@ -34,6 +34,7 @@ Widget buildToastWidget (context) {
       onTap: () {
         Navigator.pushNamed(context, 'noneWeb').then((value) => () async {
           var connectivityResult = await (Connectivity().checkConnectivity());
+          print('res======${connectivityResult.toString()}');
           switch (connectivityResult) {
             case ConnectivityResult.wifi:
               NetWork.networkType = 'wifi';

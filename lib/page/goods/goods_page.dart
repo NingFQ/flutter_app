@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/provider/cart_count.dart';
+import 'package:provider/provider.dart';
 
 class GoodsPage extends StatefulWidget {
   @override

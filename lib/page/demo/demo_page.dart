@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/provider/system_theme.dart';
 import 'package:flutter_app/common/widgets/bottom_sheet.dart';
+import 'package:provider/provider.dart';
 
 class DemoPage extends StatefulWidget {
   @override
@@ -20,10 +22,10 @@ class _DemoPageState extends State<DemoPage> {
                 showBottomBar(
                   context,
                   [
-                    {'key': 'a','title': '照片','viceTitle': '（拍照或从手机相册选取）'},
-                    {'key': 'a','title': '录像'}
+                    {'key': 'light','title': '浅色','viceTitle': 'LIGHT'},
+                    {'key': 'dark','title': '深色','viceTitle': 'DARK'}
                   ],
-                  callBack: actionCallBack
+                  callBack: (item) => Provider.of<SystemThemeProvider>(context,listen: false).switchTheme(item)
                 );
               },
             ),
@@ -73,9 +75,8 @@ class _DemoPageState extends State<DemoPage> {
     );
   }
 
-  //  操作回调
-  void actionCallBack(item) {
-    print('item====$item');
-  }
-
+  // //  操作回调
+  // void actionCallBack(item) {
+  //   Provider.of<SystemTheme>(context).switchTheme(item);
+  // }
 }
