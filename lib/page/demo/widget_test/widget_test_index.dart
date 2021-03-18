@@ -39,10 +39,10 @@ class WidgetTestIndex extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context,'myThemeApp');
+                  Navigator.pushNamed(context,'animationTest');
                 },
                 child: Text(
-                    'Theme Data'
+                    '动画'
                 ),
               ),
             ],

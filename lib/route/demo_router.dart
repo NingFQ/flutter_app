@@ -10,6 +10,7 @@ import 'package:flutter_app/page/demo/packages_test/components/smart_dialog.dart
 import 'package:flutter_app/page/demo/packages_test/packages_test.dart';
 import 'package:flutter_app/page/demo/packages_test/components/photo_view.dart';
 import 'package:flutter_app/page/demo/route_test/route_test1.dart';
+import 'package:flutter_app/page/demo/widget_test/components/animation_test.dart';
 import 'package:flutter_app/page/demo/widget_test/components/none_web.dart';
 import 'package:flutter_app/page/demo/widget_test/components/scroll_stack.dart';
 import 'package:flutter_app/page/demo/widget_test/components/tab_style.dart';
@@ -37,5 +38,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'widgetTestIndex': (content,{arguments}) => new WidgetTestIndex(),// 组件测试
   'tabStyleTest': (content,{arguments}) => new TabStyleTest(),
   'scrollStack': (context,{arguments}) => new ScrollStack(),
+  'animationTest': (context,{arguments}) => new AnimationTest(),// 动画测试
+
   'noneWeb': (context,{arguments}) => new NoneWeb(),// 没有网络
 };
