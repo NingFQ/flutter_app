@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AnimationTest extends StatefulWidget {
+class AnimationTest1 extends StatefulWidget {
   @override
-  _AnimationTestState createState() => _AnimationTestState();
+  _AnimationTest1State createState() => _AnimationTest1State();
 }
 
-class _AnimationTestState extends State<AnimationTest> with SingleTickerProviderStateMixin{
+class _AnimationTest1State extends State<AnimationTest1> with SingleTickerProviderStateMixin{
 
 
   Animation<double> animation;

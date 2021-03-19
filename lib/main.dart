@@ -1,7 +1,8 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/common/provider/back_to_top.dart';
 import 'package:flutter_app/common/provider/system_theme.dart';
-import 'package:flutter_app/common/theme/theme_data.dart';
+import 'package:flutter_app/common/untils/events.dart';
 import 'package:flutter_app/common/widgets/error_page.dart';
 import 'package:flutter_app/page/cart/cart_page.dart';
 import 'package:flutter_app/page/demo/demo_page.dart';
@@ -13,8 +14,6 @@ import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
-
-import 'common/provider/cart_count.dart';
 import 'common/untils/network_class.dart';
 
 void main ()=> runApp(MyApp());
@@ -32,8 +31,8 @@ class MyApp extends StatelessWidget {
       allowFontScaling: false,
       builder: ()=> MultiProvider(
         providers: [
-          ChangeNotifierProvider<CartCountProvider>( create: (_) => CartCountProvider(),),
           ChangeNotifierProvider<SystemThemeProvider>( create: (_) => SystemThemeProvider(),),
+          ChangeNotifierProvider<BackToTopProvider>( create: (_) => BackToTopProvider(),),
         ],
         child: Consumer<SystemThemeProvider>(
           builder: (context,systemTheme,_){
@@ -121,6 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var backToTopVM = Provider.of<BackToTopProvider>(context);
     return Scaffold(
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
         showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: backToTopVM.currentIcon,
               title: Text('首页')
           ),
           BottomNavigationBarItem(
@@ -154,6 +154,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         onTap: (index) {
           setState(() {
+            if (index == 0 && backToTopVM.shouldRefresh) {
+              eventBus.fire(new RefreshIndex());
+            } else {
+              backToTopVM.restoreIcon();
+            }
             currentIndex = index;
           });
         },

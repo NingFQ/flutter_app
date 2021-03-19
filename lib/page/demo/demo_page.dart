@@ -47,14 +47,6 @@ class _DemoPageState extends State<DemoPage> {
                 ),
                 RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context,'routeTest');
-                  },
-                  child: Text(
-                      '路由'
-                  ),
-                ),
-                RaisedButton(
-                  onPressed: () {
                     Navigator.pushNamed(context,'packagesTest');
                   },
                   child: Text(
@@ -67,6 +59,14 @@ class _DemoPageState extends State<DemoPage> {
                   },
                   child: Text(
                       '组件'
+                  ),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'animationTest');
+                  },
+                  child: Text(
+                      '动画'
                   ),
                 ),
               ],

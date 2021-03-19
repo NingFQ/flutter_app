@@ -7,3 +7,6 @@ class ProductContentEvent {
     this.text = text;
   }
 }
+class RefreshIndex {
+
+}
