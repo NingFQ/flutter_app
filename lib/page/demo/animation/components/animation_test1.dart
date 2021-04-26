@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AnimationTest1 extends StatefulWidget {
   @override
@@ -15,8 +16,8 @@ class _AnimationTest1State extends State<AnimationTest1> with SingleTickerProvid
   void initState() {
     // TODO: implement initState
     super.initState();
-    controller = new AnimationController(duration: const Duration(seconds: 2),vsync: this);
-    animation = new Tween(begin: 0.0, end: 100.0).animate(controller)
+    controller = new AnimationController(duration: const Duration(seconds: 1),vsync: this);
+    animation = new Tween(begin: 0.0, end: 1.sw).animate(controller)
       ..addListener(() {
         setState(() {
           // the state that has changed here is the animation object’s value
@@ -39,16 +40,17 @@ class _AnimationTest1State extends State<AnimationTest1> with SingleTickerProvid
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Center(
+            Container(
               child: new Container(
                 height: animation.value,
                 width: animation.value,
                 child: new FlutterLogo(),
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 }
+

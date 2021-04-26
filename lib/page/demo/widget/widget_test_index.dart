@@ -45,6 +45,22 @@ class WidgetTestIndex extends StatelessWidget {
                     '动画'
                 ),
               ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context,'customScrollViewTest');
+                },
+                child: Text(
+                    'CustomScroll'
+                ),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context,'scrollControllerTest');
+                },
+                child: Text(
+                    'ScrollController'
+                ),
+              ),
             ],
           )
       )

@@ -41,6 +41,14 @@ class _UntilsPageState extends State<UntilsPage> {
               child: Text(
                   '事件广播'
               ),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'proportionPaint');
+              },
+              child: Text(
+                  '绘制比例图'
+              ),
             )
           ],
         ),
