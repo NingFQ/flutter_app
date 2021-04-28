@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/untils/events.dart';
-import 'package:flutter_app/page/demo/function/components/event_test/event_test2.dart';
+
+import 'event_test2.dart';
 
 class EventTest extends StatefulWidget {
   @override

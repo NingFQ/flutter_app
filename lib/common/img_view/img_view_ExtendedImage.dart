@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
-import 'package:flutter_app/page/demo/packages/components/photo_view.dart';
+import 'package:flutter_app/page/demo/packages/photo_view.dart';
 import 'package:flutter_app/route/index.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:extended_image/extended_image.dart';
