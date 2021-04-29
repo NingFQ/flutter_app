@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/page/demo/widget/page_storage_test/page1.dart';
-import 'package:flutter_app/page/demo/widget/page_storage_test/page2.dart';
+import 'package:flutter_app/page/demo/page_storage_test/page1.dart';
+import 'package:flutter_app/page/demo/page_storage_test/page2.dart';
 
 class ScrollPositionRecord extends StatefulWidget {
   @override

@@ -51,7 +51,7 @@ class _DemoPageState extends State<DemoPage> {
                     RaisedButton(
                       onPressed: () => routePush('proportionPaint'),
                       child: Text(
-                          'Canvas绘制比例图'
+                          'Canvas比例图'
                       ),
                     ),
                     RaisedButton(
@@ -85,21 +85,9 @@ class _DemoPageState extends State<DemoPage> {
                       ),
                     ),
                     RaisedButton(
-                      onPressed: () => routePush('textRichTest'),
-                      child: Text(
-                          'Rich Text'
-                      ),
-                    ),
-                    RaisedButton(
                       onPressed: () => routePush('tabStyleTest'),
                       child: Text(
-                          'Tab Test'
-                      ),
-                    ),
-                    RaisedButton(
-                      onPressed: () => routePush('scrollStack'),
-                      child: Text(
-                          'Scroll Stack'
+                          'TabBar'
                       ),
                     ),
                     RaisedButton(
