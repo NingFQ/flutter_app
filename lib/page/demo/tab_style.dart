@@ -27,7 +27,7 @@ class _TabStyleTestState extends State<TabStyleTest>  with SingleTickerProviderS
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tab Style 2'),
+        title: Text('Tab Style'),
         bottom: TabBar(
             controller: _controller,
             tabs: testTabs.map((item) {
@@ -47,9 +47,9 @@ class _TabStyleTestState extends State<TabStyleTest>  with SingleTickerProviderS
                 color: Colors.blue, // 不生效
                 fontWeight: FontWeight.bold
             ),
-            labelColor: Colors.yellow,
+            labelColor: Colors.red,
             // labelPadding: EdgeInsets.only(top: 0,bottom: 0,left: 0,right: 0),
-            unselectedLabelColor: Colors.white,
+            unselectedLabelColor: Colors.black,
             unselectedLabelStyle: TextStyle(
                 fontSize: 16
             ),
@@ -59,7 +59,6 @@ class _TabStyleTestState extends State<TabStyleTest>  with SingleTickerProviderS
         ),
       ),
       body: Container(
-        // padding: EdgeInsets.all(10),
         child: TabBarView(
           controller: _controller,
           children: testTabs.map((item) {

@@ -138,6 +138,12 @@ class _DemoPageState extends State<DemoPage> {
                           'FutureBuilder'
                       ),
                     ),
+                    RaisedButton(
+                      onPressed: () => routePush('streamBuildTest'),
+                      child: Text(
+                          'StreamBuilder'
+                      ),
+                    ),
                   ],
                 ),
               ),
