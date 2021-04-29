@@ -75,13 +75,13 @@ class _DemoPageState extends State<DemoPage> {
                     RaisedButton(
                       onPressed: () => routePush('recordMp3AudioPlay'),
                       child: Text(
-                          '音频录制record_mp3版'
+                          '录音record_mp3'
                       ),
                     ),
                     RaisedButton(
                       onPressed: () => routePush('recorderAudioPlay'),
                       child: Text(
-                          '音频录制recorder版'
+                          '录音recorder'
                       ),
                     ),
                     RaisedButton(
@@ -136,6 +136,18 @@ class _DemoPageState extends State<DemoPage> {
                       onPressed: () => routePush('animationTest2'),
                       child: Text(
                           '动画2'
+                      ),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('inheritedTest'),
+                      child: Text(
+                          'Inherited'
+                      ),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('futureBuildTest'),
+                      child: Text(
+                          'FutureBuilder'
                       ),
                     ),
                   ],

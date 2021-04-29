@@ -11,6 +11,8 @@ import 'package:flutter_app/page/demo/packages/record_mp3/record_mp3.dart';
 import 'package:flutter_app/page/demo/packages/record_mp3/recorder_mp3.dart';
 import 'package:flutter_app/page/demo/packages/smart_dialog.dart';
 import 'package:flutter_app/page/demo/widget/custom_scroll_view.dart';
+import 'package:flutter_app/page/demo/widget/future_build_test.dart';
+import 'package:flutter_app/page/demo/widget/inherited_test.dart';
 import 'package:flutter_app/page/demo/widget/none_web.dart';
 import 'package:flutter_app/page/demo/widget/page_storage_test/scroll_position_record.dart';
 import 'package:flutter_app/page/demo/widget/scroll_addListener.dart';
@@ -40,6 +42,8 @@ Map<String,WidgetBuilder> demoRoutes = {
   'scrollControllerTest': (context,{arguments}) => new ScrollControllerTest(),// 滚动
   'scrollPositionRecord': (context,{arguments}) => new ScrollPositionRecord(),// 滚动
   'scrollAddListener': (context,{arguments}) => new ScrollAddListener(),// 滚动
+  'inheritedTest': (context,{arguments}) => new InheritedTest(),// InheritedWidget
+  'futureBuildTest': (context,{arguments}) => new FutureBuildTest(),// InheritedWidget
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),
