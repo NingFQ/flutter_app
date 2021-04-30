@@ -133,23 +133,23 @@ class _MyHomePageState extends State<MyHomePage> {
         items: [
           BottomNavigationBarItem(
               icon: backToTopVM.currentIcon,
-              title: Text('首页')
+              label: '首页'
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.view_list),
-              title: Text('分类')
+              label: '分类'
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_shopping_cart),
-              title: Text('购物车')
+              label: '购物车'
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text('我的')
+              label: '我的'
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text('Demo')
+              label: 'Demo'
           ),
         ],
         onTap: (index) {

@@ -144,6 +144,12 @@ class _DemoPageState extends State<DemoPage> {
                           'StreamBuilder'
                       ),
                     ),
+                    RaisedButton(
+                      onPressed: () => routePush('gestureDragTest'),
+                      child: Text(
+                          'Gesture Drag'
+                      ),
+                    ),
                   ],
                 ),
               ),

@@ -6,6 +6,7 @@ import 'package:flutter_app/page/demo/animation/animation_test2.dart';
 import 'package:flutter_app/page/demo/custom_scroll_view.dart';
 import 'package:flutter_app/page/demo/event_test/event_test.dart';
 import 'package:flutter_app/page/demo/future_builder_test.dart';
+import 'package:flutter_app/page/demo/gesture_drag_test.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
 import 'package:flutter_app/page/demo/packages/network_monitor/none_web.dart';
 import 'package:flutter_app/page/demo/page_storage_test/scroll_position_record.dart';
@@ -42,6 +43,8 @@ Map<String,WidgetBuilder> demoRoutes = {
   'inheritedTest': (context,{arguments}) => new InheritedTest(),// InheritedWidget
   'futureBuildTest': (context,{arguments}) => new FutureBuildTest(),// FutureBuilder
   'streamBuildTest': (context,{arguments}) => new StreamBuildTest(),// StreamBuilder
+  'gestureDragTest': (context,{arguments}) => new GestureDragTest(),// GestureDrag
+  'GestureDragTest'
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),

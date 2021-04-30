@@ -11,7 +11,7 @@ class AppThemeData {
     primarySwatch: Colors.pink,
     primaryColor: Colors.white,
     primaryTextTheme: TextTheme(
-      title: TextStyle(
+      headline6: TextStyle(
         color: Colors.black,
         fontSize: _titleFontSize,
         fontWeight: FontWeight.w500
@@ -39,7 +39,7 @@ class AppThemeData {
     primaryColor: Colors.white,
     primarySwatch: Colors.pink,
     primaryTextTheme: TextTheme(
-      title: TextStyle(
+      headline6: TextStyle(
         color: Colors.white,
         fontSize: _titleFontSize,
         fontWeight: FontWeight.w500

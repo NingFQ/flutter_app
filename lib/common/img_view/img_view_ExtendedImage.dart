@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
 import 'package:flutter_app/page/demo/packages/photo_view.dart';
 import 'package:flutter_app/route/index.dart';

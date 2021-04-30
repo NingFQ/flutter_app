@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/canvas/pain_proportion.dart';
-import 'dart:math' as math;
 
 class ProportionPaint extends StatefulWidget {
   @override

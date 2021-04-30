@@ -1,7 +1,5 @@
 import 'dart:ui';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 
 class PainCanvas extends CustomPainter {
   double limitWidth = 300.0;
