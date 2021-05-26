@@ -7,7 +7,9 @@ import 'package:flutter_app/page/demo/custom_scroll_view.dart';
 import 'package:flutter_app/page/demo/event_test/event_test.dart';
 import 'package:flutter_app/page/demo/future_builder_test.dart';
 import 'package:flutter_app/page/demo/gesture_drag_test.dart';
+import 'package:flutter_app/page/demo/icon_test.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
+import 'package:flutter_app/page/demo/notification.dart';
 import 'package:flutter_app/page/demo/packages/network_monitor/none_web.dart';
 import 'package:flutter_app/page/demo/page_storage_test/scroll_position_record.dart';
 import 'package:flutter_app/page/demo/proportion_paint.dart';
@@ -44,7 +46,8 @@ Map<String,WidgetBuilder> demoRoutes = {
   'futureBuildTest': (context,{arguments}) => new FutureBuildTest(),// FutureBuilder
   'streamBuildTest': (context,{arguments}) => new StreamBuildTest(),// StreamBuilder
   'gestureDragTest': (context,{arguments}) => new GestureDragTest(),// GestureDrag
-  'GestureDragTest'
+  'notificationTest': (context,{arguments}) => new NotificationTest(),// Notification
+  'iconFontText': (context,{arguments}) => new IconFontText(),// IconFontText
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),
