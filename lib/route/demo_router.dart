@@ -18,10 +18,13 @@ import 'package:flutter_app/page/demo/packages/photo_view.dart';
 import 'package:flutter_app/page/demo/packages/record_mp3/record_mp3.dart';
 import 'package:flutter_app/page/demo/packages/record_mp3/recorder_mp3.dart';
 import 'package:flutter_app/page/demo/packages/smart_dialog.dart';
+import 'package:flutter_app/page/demo/screen_capture.dart';
 import 'package:flutter_app/page/demo/scroll_addListener.dart';
 import 'package:flutter_app/page/demo/scroll_controller.dart';
+import 'package:flutter_app/page/demo/stack_card.dart';
 import 'package:flutter_app/page/demo/stream_builder_test.dart';
 import 'package:flutter_app/page/demo/tab_style.dart';
+import 'package:flutter_app/page/demo/web_socket.dart';
 
 
 
@@ -48,6 +51,9 @@ Map<String,WidgetBuilder> demoRoutes = {
   'gestureDragTest': (context,{arguments}) => new GestureDragTest(),// GestureDrag
   'notificationTest': (context,{arguments}) => new NotificationTest(),// Notification
   'iconFontText': (context,{arguments}) => new IconFontText(),// IconFontText
+  'screenCapture': (context,{arguments}) => new ScreenCapture(),// 截屏
+  'stackCard': (context,{arguments}) => new StackCard(),// 层叠卡片
+  'webSocketTest': (context,{arguments}) => new WebSocketTest(),// 层叠卡片
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),

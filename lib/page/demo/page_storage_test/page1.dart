@@ -18,6 +18,7 @@ class _Page1State extends State<Page1> {
   @override
   void initState() {
     Page1Params p = PageStorage.of(context).readState(context);
+    print('p========+$p');
     if (p != null) {
       params = p;
     } else {

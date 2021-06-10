@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/canvas/pain_proportion.dart';
+import 'package:flutter_app/common/widgets/gradient_button.dart';
 
 class ProportionPaint extends StatefulWidget {
   @override
@@ -14,40 +15,28 @@ class _ProportionPaintState extends State<ProportionPaint> {
         title: Text('绘制比例图'),
       ),
       body: Container(
+        alignment: Alignment.centerLeft,
         padding: EdgeInsets.all(30),
-        child: Stack(
-          overflow: Overflow.visible,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Container(
-            //   width: 100,
-            //   height: 20,
-            //   decoration: BoxDecoration(
-            //     color: Colors.red,
-            //     shape: BoxShape.rectangle
-            //   ),
-            // ),
             Container(
               child: CustomPaint(
-                  painter: PainCanvas(rate: 0.3,limitWidth: 300.0)
+                painter: PainCanvas(rate: 0.3,limitWidth: 200.0)
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              child: GradientButton(
+                width: 200,
+                height: 80,
+                colors: [
+                  Colors.orange,
+                  Colors.deepOrange
+                ],
               ),
             )
-            // Container(
-            //   width: 100,
-            //   height: 25,
-            //   color: Colors.green,
-            // ),
-            // Positioned(
-            //     bottom: 0,
-            //     right: -10,
-            //     child: Transform.rotate(
-            //       angle: math.pi / 4,
-            //       child: Container(
-            //         width: 25,
-            //         height: 21,
-            //         color: Colors.green,
-            //       ),
-            //     )
-            // ),
           ],
         )
       ),

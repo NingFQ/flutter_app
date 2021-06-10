@@ -35,7 +35,7 @@ dependencies:
   permission_handler: ^5.1.0+2 # 权限获取
   audioplayers: ^0.17.4 # 音频播放
   flutter_audio_recorder: ^0.5.5 #录音2
-
+  web_socket_channel: ^1.2.0 # 网络通信
 
 
 dev_dependencies:

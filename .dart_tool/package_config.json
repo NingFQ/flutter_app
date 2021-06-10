@@ -356,6 +356,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "web_socket_channel",
+      "rootUri": "file:///Users/ningfangqiang/work/flutter/.pub-cache/hosted/pub.flutter-io.cn/web_socket_channel-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.10"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///Users/ningfangqiang/work/flutter/.pub-cache/hosted/pub.flutter-io.cn/win32-1.7.4+1",
       "packageUri": "lib/",
@@ -374,7 +380,7 @@
       "languageVersion": "2.2"
     }
   ],
-  "generated": "2021-05-28T02:15:44.452579Z",
+  "generated": "2021-06-10T07:31:38.838239Z",
   "generator": "pub",
   "generatorVersion": "2.10.5"
 }

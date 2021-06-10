@@ -121,9 +121,22 @@ class _DemoPageState extends State<DemoPage> {
                     RaisedButton(
                       onPressed: () => routePush('notificationTest'),
                       child: Text('Notification'),
-                    ),RaisedButton(
+                    ),
+                    RaisedButton(
                       onPressed: () => routePush('iconFontText'),
                       child: Text('IconFont'),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('screenCapture'),
+                      child: Text('截屏'),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('stackCard'),
+                      child: Text('StackCard'),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('webSocketTest'),
+                      child: Text('Web Socket'),
                     ),
                   ],
                 ),

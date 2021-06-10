@@ -406,6 +406,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.0-nullsafety.3"
+  web_socket_channel:
+    dependency: "direct main"
+    description:
+      name: web_socket_channel
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.2.0"
   win32:
     dependency: transitive
     description:
@@ -421,5 +428,5 @@ packages:
     source: hosted
     version: "0.1.0"
 sdks:
-  dart: ">=2.10.0-110 <2.11.0"
+  dart: ">=2.10.0 <2.11.0"
   flutter: ">=1.17.0 <2.0.0"
