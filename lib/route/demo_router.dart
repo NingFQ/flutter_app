@@ -9,6 +9,7 @@ import 'package:flutter_app/page/demo/future_builder_test.dart';
 import 'package:flutter_app/page/demo/gesture_drag_test.dart';
 import 'package:flutter_app/page/demo/icon_test.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
+import 'package:flutter_app/page/demo/loading_btn.dart';
 import 'package:flutter_app/page/demo/notification.dart';
 import 'package:flutter_app/page/demo/packages/network_monitor/none_web.dart';
 import 'package:flutter_app/page/demo/page_storage_test/scroll_position_record.dart';
@@ -37,8 +38,8 @@ Map<String,WidgetBuilder> demoRoutes = {
   'photoView': (content,{arguments}) => new PhotoView(),// 图片预览
   'networkMonitor': (content,{arguments}) => new NetworkMonitor(),// 网络监听
   'smartDialog': (content,{arguments}) => new SmartDialogWidget(),// smart dialog
-  'recorderAudioPlay': (content,{arguments}) => new RecorderAudioPlay(),// 音频录制
-  'recordMp3AudioPlay': (content,{arguments}) => new RecordMp3AudioPlay(),// 音频录制
+  // 'recorderAudioPlay': (content,{arguments}) => new RecorderAudioPlay(),// 音频录制
+  // 'recordMp3AudioPlay': (content,{arguments}) => new RecordMp3AudioPlay(),// 音频录制
   // 组件测试
   'tabStyleTest': (content,{arguments}) => new TabStyleTest(),
   'customScrollViewTest': (context,{arguments}) => new CustomScrollViewTest(),// 滚动
@@ -54,6 +55,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'screenCapture': (context,{arguments}) => new ScreenCapture(),// 截屏
   'stackCard': (context,{arguments}) => new StackCard(),// 层叠卡片
   'webSocketTest': (context,{arguments}) => new WebSocketTest(),// 层叠卡片
+  'loadingBtn': (context,{arguments}) => new LoadingBtn(),// 层叠卡片
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),

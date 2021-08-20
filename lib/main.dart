@@ -10,7 +10,7 @@ import 'package:flutter_app/page/goods/goods_page.dart';
 import 'package:flutter_app/page/index/index_page.dart';
 import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
-import 'package:flutter_screenutil/screenutil_init.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
@@ -28,11 +28,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(flutterScreenWidth,flutterScreenHeight),
-      allowFontScaling: false,
       builder: ()=> MultiProvider(
         providers: [
           ChangeNotifierProvider<SystemThemeProvider>( create: (_) => SystemThemeProvider(),),
           ChangeNotifierProvider<BackToTopProvider>( create: (_) => BackToTopProvider(),),
+
         ],
         child: Consumer<SystemThemeProvider>(
           builder: (context,systemTheme,_){
@@ -47,7 +47,6 @@ class MyApp extends StatelessWidget {
               home: MyHomePage(),
               onUnknownRoute: (RouteSettings setting) {
                 String name = setting.name;
-                print("未匹配到路由:$name");
                 return new MaterialPageRoute(builder: (context) {
                   return ErrorPage();
                 });

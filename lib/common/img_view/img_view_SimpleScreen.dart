@@ -33,7 +33,7 @@ class PhotoViewSimpleScreen extends StatelessWidget{
               right: 0,
               child: PhotoView(
                 imageProvider: imageProvider,
-                loadingChild: loadingChild,
+                // loadingChild: loadingChild,
                 backgroundDecoration: backgroundDecoration,
                 minScale: minScale,
                 maxScale: maxScale,

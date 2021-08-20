@@ -138,6 +138,10 @@ class _DemoPageState extends State<DemoPage> {
                       onPressed: () => routePush('webSocketTest'),
                       child: Text('Web Socket'),
                     ),
+                    RaisedButton(
+                      onPressed: () => routePush('loadingBtn'),
+                      child: Text('Loading Btn'),
+                    ),
                   ],
                 ),
               ),

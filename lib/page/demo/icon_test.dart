@@ -12,8 +12,22 @@ class _IconFontTextState extends State<IconFontText> {
       appBar: AppBar(),
       body: Column(
         children: [
-          Icon(IconData(0xe64b,fontFamily: 'iconfont',),color: Colors.orange,size: 40.0),
-          Icon(IconData(0xe645,fontFamily: 'iconfont',),color: Colors.orange,size: 40.0),
+          Icon(
+            IconData(
+              0xe64b,
+              fontFamily: 'iconfont',
+            ),
+            color: Colors.orangeAccent,
+            size: 40.0,
+          ),
+          Icon(
+            IconData(
+              0xe645,
+              fontFamily: 'iconfont',
+            ),
+            color: Colors.orange,
+            size: 70.0,
+          ),
         ],
       ),
     );
