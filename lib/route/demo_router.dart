@@ -7,11 +7,13 @@ import 'package:flutter_app/page/demo/custom_scroll_view.dart';
 import 'package:flutter_app/page/demo/event_test/event_test.dart';
 import 'package:flutter_app/page/demo/future_builder_test.dart';
 import 'package:flutter_app/page/demo/gesture_drag_test.dart';
+import 'package:flutter_app/page/demo/getX/counter/view.dart';
+import 'package:flutter_app/page/demo/getX/cross_page/page_one/view.dart';
+import 'package:flutter_app/page/demo/getX/cross_page/page_two/view.dart';
 import 'package:flutter_app/page/demo/icon_test.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
 import 'package:flutter_app/page/demo/loading_btn.dart';
 import 'package:flutter_app/page/demo/notification.dart';
-import 'package:flutter_app/page/demo/packages/network_monitor/none_web.dart';
 import 'package:flutter_app/page/demo/page_storage_test/scroll_position_record.dart';
 import 'package:flutter_app/page/demo/proportion_paint.dart';
 import 'package:flutter_app/page/demo/packages/network_monitor/network_monitor.dart';
@@ -22,7 +24,6 @@ import 'package:flutter_app/page/demo/packages/smart_dialog.dart';
 import 'package:flutter_app/page/demo/screen_capture.dart';
 import 'package:flutter_app/page/demo/scroll_addListener.dart';
 import 'package:flutter_app/page/demo/scroll_controller.dart';
-import 'package:flutter_app/page/demo/stack_card.dart';
 import 'package:flutter_app/page/demo/stream_builder_test.dart';
 import 'package:flutter_app/page/demo/tab_style.dart';
 import 'package:flutter_app/page/demo/web_socket.dart';
@@ -53,12 +54,14 @@ Map<String,WidgetBuilder> demoRoutes = {
   'notificationTest': (context,{arguments}) => new NotificationTest(),// Notification
   'iconFontText': (context,{arguments}) => new IconFontText(),// IconFontText
   'screenCapture': (context,{arguments}) => new ScreenCapture(),// 截屏
-  'stackCard': (context,{arguments}) => new StackCard(),// 层叠卡片
   'webSocketTest': (context,{arguments}) => new WebSocketTest(),// 层叠卡片
   'loadingBtn': (context,{arguments}) => new LoadingBtn(),// 层叠卡片
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),
-  // 没有网络
-  'noneWeb': (context,{arguments}) => new NoneWeb(),
+  // GetX计数器
+  'getXCounter': (context,{arguments}) => new CounterPage(),
+  // 跨页面
+  'pageOnePage': (context,{arguments}) => new PageOnePage(),
+  'pageTwoPage': (context,{arguments}) => new PageTwoPage(),
 };

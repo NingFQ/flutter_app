@@ -12,6 +12,7 @@ import 'package:flutter_app/page/mine/mine_page.dart';
 import 'package:flutter_app/route/index.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
 import 'common/untils/network_class.dart';
@@ -32,11 +33,10 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider<SystemThemeProvider>( create: (_) => SystemThemeProvider(),),
           ChangeNotifierProvider<BackToTopProvider>( create: (_) => BackToTopProvider(),),
-
         ],
         child: Consumer<SystemThemeProvider>(
           builder: (context,systemTheme,_){
-            return MaterialApp(
+            return GetMaterialApp(
               title: 'Flutter Demo',
               // debugShowMaterialGrid: true,
               // showSemanticsDebugger: true,

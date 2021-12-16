@@ -19,23 +19,28 @@ class GradientButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
-    List<Color> _colors = colors ?? [theme.primaryColor,theme.primaryColorDark ?? theme.primaryColor];
-
+    List<Color> _colors = colors ??
+        [theme.primaryColor, theme.primaryColorDark ?? theme.primaryColor];
 
     return DecoratedBox(
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: _colors),
-        borderRadius: BorderRadius.all(Radius.circular(10))
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
       ),
       child: Material(
         type: MaterialType.transparency,
         child: ConstrainedBox(
           constraints: BoxConstraints.tightFor(height: height, width: width),
           child: Center(
-            child: Text('Button',style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30
-            ),),
+            child: Text(
+              'Button',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
+            ),
           ),
         ),
       ),

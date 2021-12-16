@@ -30,7 +30,8 @@ class _SmartDialogWidgetState extends State<SmartDialogWidget> {
             RaisedButton(
               child: Text('关闭网络提示 toast'),
               onPressed: () {
-                NetWork.hideNetWorkHint();
+                SmartDialog.dismiss();
+                // NetWork.hideNetWorkHint();
               },
             ),
             RaisedButton(
@@ -40,9 +41,9 @@ class _SmartDialogWidgetState extends State<SmartDialogWidget> {
                   alignmentTemp: Alignment.bottomCenter,
                   clickBgDismissTemp: true,
                   widget: Container(
+                    width: double.infinity,
                     color: Colors.blue,
                     height: 300,
-                    child: Text('网络有无'),
                   ),
                 );
               },

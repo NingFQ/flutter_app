@@ -131,16 +131,20 @@ class _DemoPageState extends State<DemoPage> {
                       child: Text('截屏'),
                     ),
                     RaisedButton(
-                      onPressed: () => routePush('stackCard'),
-                      child: Text('StackCard'),
-                    ),
-                    RaisedButton(
                       onPressed: () => routePush('webSocketTest'),
                       child: Text('Web Socket'),
                     ),
                     RaisedButton(
                       onPressed: () => routePush('loadingBtn'),
                       child: Text('Loading Btn'),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('getXCounter'),
+                      child: Text('GetXCounter'),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('pageOnePage'),
+                      child: Text('GetXCounter2'),
                     ),
                   ],
                 ),

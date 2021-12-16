@@ -37,6 +37,8 @@ dependencies:
 #  flutter_audio_recorder: ^0.5.5 #录音2
   web_socket_channel: ^1.2.0 # 网络通信
   rounded_loading_button: 1.0.18 #loading按钮
+  table_sticky_headers: ^2.0.0 #滑动表格
+  get: ^3.26.0
 
 dev_dependencies:
   flutter_test:

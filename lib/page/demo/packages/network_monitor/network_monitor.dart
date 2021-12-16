@@ -18,7 +18,6 @@ class _NetworkMonitorState extends State<NetworkMonitor> {
     super.initState();
     firstInit();
     _connectivitySubscription = _connectivity.onConnectivityChanged.listen((ConnectivityResult result) async {
-      print('resul=========${result.toString()}');
       switch (result) {
         case ConnectivityResult.wifi:
         case ConnectivityResult.mobile:
