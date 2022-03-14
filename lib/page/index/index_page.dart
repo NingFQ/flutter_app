@@ -19,19 +19,19 @@ class _IndexPageState extends State<IndexPage> {
   void initState() {
     super.initState();
     _controller = ScrollController()
-    ..addListener(() {
-      if (_controller.offset > 100.0) {
-        Provider.of<BackToTopProvider>(context, listen: false).changeIcon();
-      } else {
-        Provider.of<BackToTopProvider>(context, listen: false).restoreIcon();
-      }
-    });
-    actionSubscription = eventBus.on<RefreshIndex>().listen((event){
-      SmartDialog.showToast('刷新',alignment: Alignment.topCenter);
-      _controller.animateTo(0, duration: Duration(milliseconds: 200), curve: Curves.easeInSine);
+      ..addListener(() {
+        if (_controller.offset > 100.0) {
+          Provider.of<BackToTopProvider>(context, listen: false).changeIcon();
+        } else {
+          Provider.of<BackToTopProvider>(context, listen: false).restoreIcon();
+        }
+      });
+    actionSubscription = eventBus.on<RefreshIndex>().listen((event) {
+      SmartDialog.showToast('刷新', alignment: Alignment.bottomCenter);
+      _controller.animateTo(0,
+          duration: Duration(milliseconds: 200), curve: Curves.easeInSine);
     });
   }
-
 
   @override
   void dispose() {
@@ -65,7 +65,7 @@ class _IndexPageState extends State<IndexPage> {
                   height: 0.5.sh,
                 ),
               ],
-            )
+            ),
           ),
         ),
       ),

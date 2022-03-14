@@ -1,4 +1,5 @@
 import 'package:connectivity/connectivity.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/provider/back_to_top.dart';
 import 'package:flutter_app/common/provider/system_theme.dart';
@@ -122,35 +123,37 @@ class _MyHomePageState extends State<MyHomePage> {
     var backToTopVM = Provider.of<BackToTopProvider>(context);
     return Scaffold(
       body: pages[currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
+      bottomNavigationBar: ConvexAppBar(
+        style: TabStyle.react,
+        color: Color(0xFF999999),
+        activeColor: Colors.black,
         backgroundColor: Colors.white,
-        unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.deepOrange,
-        type: BottomNavigationBarType.shifting,
-        showUnselectedLabels: true,
+        top: -20.0,
+        cornerRadius: 0,
+        curveSize: 70.0,
         items: [
-          BottomNavigationBarItem(
+          TabItem(
               icon: backToTopVM.currentIcon,
-              label: '首页'
+              title: '首页',
           ),
-          BottomNavigationBarItem(
+          TabItem(
               icon: Icon(Icons.view_list),
-              label: '分类'
+              title: '分类',
           ),
-          BottomNavigationBarItem(
+          TabItem(
               icon: Icon(Icons.add_shopping_cart),
-              label: '购物车'
+              title: '购物车',
           ),
-          BottomNavigationBarItem(
+          TabItem(
               icon: Icon(Icons.person),
-              label: '我的'
+              title: '我的',
           ),
-          BottomNavigationBarItem(
+          TabItem(
               icon: Icon(Icons.person),
-              label: 'Demo'
+              title: 'Demo',
           ),
         ],
+        initialActiveIndex: 1,
         onTap: (index) {
           setState(() {
             if (index == 0 && backToTopVM.shouldRefresh) {
@@ -162,6 +165,47 @@ class _MyHomePageState extends State<MyHomePage> {
           });
         },
       ),
+
+      // BottomNavigationBar(
+      //   currentIndex: currentIndex,
+      //   backgroundColor: Colors.white,
+      //   unselectedItemColor: Colors.black,
+      //   selectedItemColor: Colors.deepOrange,
+      //   type: BottomNavigationBarType.shifting,
+      //   showUnselectedLabels: true,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //         icon: backToTopVM.currentIcon,
+      //         label: '首页'
+      //     ),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.view_list),
+      //         label: '分类'
+      //     ),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.add_shopping_cart),
+      //         label: '购物车'
+      //     ),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.person),
+      //         label: '我的'
+      //     ),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.person),
+      //         label: 'Demo'
+      //     ),
+      //   ],
+      //   onTap: (index) {
+      //     setState(() {
+      //       if (index == 0 && backToTopVM.shouldRefresh) {
+      //         eventBus.fire(new RefreshIndex());
+      //       } else {
+      //         backToTopVM.restoreIcon();
+      //       }
+      //       currentIndex = index;
+      //     });
+      //   },
+      // ),
     );
   }
 }

@@ -5,6 +5,7 @@ class CounterLogic extends GetxController {
 
   void increase() {
     count ++;
+    /// 不是obs类型的变量 需要调用updata方法来进行刷新
     update();
   }
 }

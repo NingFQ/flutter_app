@@ -140,11 +140,15 @@ class _DemoPageState extends State<DemoPage> {
                     ),
                     RaisedButton(
                       onPressed: () => routePush('getXCounter'),
-                      child: Text('GetXCounter'),
+                      child: Text('GetX Easy'),
+                    ),
+                    RaisedButton(
+                      onPressed: () => routePush('getXObjPage'),
+                      child: Text('GetX Obj'),
                     ),
                     RaisedButton(
                       onPressed: () => routePush('pageOnePage'),
-                      child: Text('GetXCounter2'),
+                      child: Text('GetXCounter'),
                     ),
                   ],
                 ),

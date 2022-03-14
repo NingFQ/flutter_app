@@ -39,6 +39,7 @@ dependencies:
   rounded_loading_button: 1.0.18 #loading按钮
   table_sticky_headers: ^2.0.0 #滑动表格
   get: ^3.26.0
+  convex_bottom_bar: ^3.0.0 # 底部按钮
 
 dev_dependencies:
   flutter_test:

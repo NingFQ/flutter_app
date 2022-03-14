@@ -10,6 +10,7 @@ import 'package:flutter_app/page/demo/gesture_drag_test.dart';
 import 'package:flutter_app/page/demo/getX/counter/view.dart';
 import 'package:flutter_app/page/demo/getX/cross_page/page_one/view.dart';
 import 'package:flutter_app/page/demo/getX/cross_page/page_two/view.dart';
+import 'package:flutter_app/page/demo/getX/getx_obj/view.dart';
 import 'package:flutter_app/page/demo/icon_test.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
 import 'package:flutter_app/page/demo/loading_btn.dart';
@@ -59,9 +60,9 @@ Map<String,WidgetBuilder> demoRoutes = {
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),
-  // GetX计数器
+  // GetX
   'getXCounter': (context,{arguments}) => new CounterPage(),
-  // 跨页面
+  'getXObjPage': (context,{arguments}) => new GetXObjPage(),// getX修改obj类型的数据
   'pageOnePage': (context,{arguments}) => new PageOnePage(),
   'pageTwoPage': (context,{arguments}) => new PageTwoPage(),
 };

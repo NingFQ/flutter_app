@@ -8,7 +8,7 @@ class PageTwoLogic extends GetxController {
   void onReady() {
     var map = Get.arguments;
     print(map);
-    msg = map['msg'];
+    msg = map['msg']??'';
     update();
     super.onReady();
   }

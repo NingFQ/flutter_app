@@ -68,6 +68,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convex_bottom_bar",
+      "rootUri": "file:///Users/ningfangqiang/flutter_sdk/flutter_2.2.3/.pub-cache/hosted/pub.flutter-io.cn/convex_bottom_bar-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///Users/ningfangqiang/flutter_sdk/flutter_2.2.3/.pub-cache/hosted/pub.flutter-io.cn/crypto-3.0.1",
       "packageUri": "lib/",
@@ -392,7 +398,7 @@
       "languageVersion": "2.5"
     }
   ],
-  "generated": "2021-11-09T02:09:37.930413Z",
+  "generated": "2022-03-11T02:03:09.564844Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
