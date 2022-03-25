@@ -150,6 +150,10 @@ class _DemoPageState extends State<DemoPage> {
                       onPressed: () => routePush('pageOnePage'),
                       child: Text('GetXCounter'),
                     ),
+                    RaisedButton(
+                      onPressed: () => routePush('listApi'),
+                      child: Text('ListApi'),
+                    ),
                   ],
                 ),
               ),

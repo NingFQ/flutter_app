@@ -76,7 +76,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  int currentIndex = 4;
+  int currentIndex = 0;
 
   List pages = [
     IndexPage(),
@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: 'Demo',
           ),
         ],
-        initialActiveIndex: 1,
+        initialActiveIndex: 0,
         onTap: (index) {
           setState(() {
             if (index == 0 && backToTopVM.shouldRefresh) {

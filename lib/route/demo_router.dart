@@ -13,6 +13,7 @@ import 'package:flutter_app/page/demo/getX/cross_page/page_two/view.dart';
 import 'package:flutter_app/page/demo/getX/getx_obj/view.dart';
 import 'package:flutter_app/page/demo/icon_test.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
+import 'package:flutter_app/page/demo/list_api.dart';
 import 'package:flutter_app/page/demo/loading_btn.dart';
 import 'package:flutter_app/page/demo/notification.dart';
 import 'package:flutter_app/page/demo/page_storage_test/scroll_position_record.dart';
@@ -65,4 +66,6 @@ Map<String,WidgetBuilder> demoRoutes = {
   'getXObjPage': (context,{arguments}) => new GetXObjPage(),// getX修改obj类型的数据
   'pageOnePage': (context,{arguments}) => new PageOnePage(),
   'pageTwoPage': (context,{arguments}) => new PageTwoPage(),
+  // 数组方法
+  'listApi': (context,{arguments}) => new ListApi(),// 数组方法
 };
