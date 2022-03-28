@@ -46,113 +46,117 @@ class _DemoPageState extends State<DemoPage> {
                   spacing: 10,
                   runSpacing: 10,
                   children: <Widget>[
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('eventTest'),
                       child: Text('事件广播'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('proportionPaint'),
                       child: Text('Canvas比例图'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('photoView'),
                       child: Text('图片预览'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('networkMonitor'),
                       child: Text('网络监听'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('smartDialog'),
                       child: Text('智能Toast'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('recordMp3AudioPlay'),
                       child: Text('录音record_mp3'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('recorderAudioPlay'),
                       child: Text('录音recorder'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('tabStyleTest'),
                       child: Text('TabBar'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('customScrollViewTest'),
                       child: Text('CustomScroll'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('scrollControllerTest'),
                       child: Text('ScrollController'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('scrollPositionRecord'),
                       child: Text('Page Storage'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('scrollAddListener'),
                       child: Text('scrollAddListener'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('animationTest1'),
                       child: Text('动画1'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('animationTest2'),
                       child: Text('动画2'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('inheritedTest'),
                       child: Text('Inherited'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('futureBuildTest'),
                       child: Text('FutureBuilder'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('streamBuildTest'),
                       child: Text('StreamBuilder'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('gestureDragTest'),
                       child: Text('Gesture Drag'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('notificationTest'),
                       child: Text('Notification'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('iconFontText'),
                       child: Text('IconFont'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('screenCapture'),
                       child: Text('截屏'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('webSocketTest'),
                       child: Text('Web Socket'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('loadingBtn'),
                       child: Text('Loading Btn'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('getXCounter'),
                       child: Text('GetX Easy'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('getXObjPage'),
                       child: Text('GetX Obj'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('pageOnePage'),
                       child: Text('GetXCounter'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () => routePush('listApi'),
                       child: Text('ListApi'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () => routePush('IndexedStackPage'),
+                      child: Text('IndexedStack'),
                     ),
                   ],
                 ),

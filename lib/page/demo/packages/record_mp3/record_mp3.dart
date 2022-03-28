@@ -107,7 +107,7 @@
 //                   children: [
 //                     Visibility(
 //                       visible: _recodeReady,
-//                       child: RaisedButton(
+//                       child: ElevatedButton(
 //                         onPressed: !_recodeReady ? null : () => startRecord(),
 //                         color: Colors.red,
 //                         child: Text('开始录音',style: TextStyle(color: Colors.white),),
@@ -115,7 +115,7 @@
 //                     ),
 //                     Visibility(
 //                       visible: _recordIng,
-//                       child: RaisedButton(
+//                       child: ElevatedButton(
 //                         onPressed: () => pauseRecord(),
 //                         color: Colors.red,
 //                         child: Text('暂停录音',style: TextStyle(color: Colors.white),),
@@ -128,17 +128,17 @@
 //                           Row(
 //                             mainAxisAlignment: MainAxisAlignment.spaceAround,
 //                             children: [
-//                               RaisedButton(
+//                               ElevatedButton(
 //                                 onPressed: () => audioSeek(1),
 //                                 color: Colors.red.shade500,
 //                                 child: Text('回退15s',style: TextStyle(color: Colors.white),),
 //                               ),
-//                               RaisedButton(
+//                               ElevatedButton(
 //                                 onPressed: recordFilePath.isEmpty ? null : () => playPauseAudio(),
 //                                 color: Colors.black,
 //                                 child: Text('${_audioPlaying ? '暂停' : '播放'}',style: TextStyle(color: Colors.white),),
 //                               ),
-//                               RaisedButton(
+//                               ElevatedButton(
 //                                 onPressed: () => audioSeek(2),
 //                                 color: Colors.red.shade500,
 //                                 child: Text('前进15s',style: TextStyle(color: Colors.white),),
@@ -148,17 +148,17 @@
 //                           Row(
 //                             mainAxisAlignment: MainAxisAlignment.spaceAround,
 //                             children: [
-//                               RaisedButton(
+//                               ElevatedButton(
 //                                 onPressed:  _audioPlaying ? null : () => againRecord(),
 //                                 color: Colors.black,
 //                                 child: Text('重录',style: TextStyle(color: Colors.white),),
 //                               ),
-//                               RaisedButton(
+//                               ElevatedButton(
 //                                 onPressed: _audioPlaying ? null : () => resumeRecord(),
 //                                 color: Colors.red.shade500,
 //                                 child: Text('继续录制',style: TextStyle(color: Colors.white),),
 //                               ),
-//                               RaisedButton(
+//                               ElevatedButton(
 //                                 onPressed: _audioPlaying ? null : () => recordComplete(),
 //                                 color: Colors.green.shade500,
 //                                 child: Text('完成',style: TextStyle(color: Colors.white),),

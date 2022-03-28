@@ -12,6 +12,7 @@ import 'package:flutter_app/page/demo/getX/cross_page/page_one/view.dart';
 import 'package:flutter_app/page/demo/getX/cross_page/page_two/view.dart';
 import 'package:flutter_app/page/demo/getX/getx_obj/view.dart';
 import 'package:flutter_app/page/demo/icon_test.dart';
+import 'package:flutter_app/page/demo/indexed_stack/Indexed_stack.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
 import 'package:flutter_app/page/demo/list_api.dart';
 import 'package:flutter_app/page/demo/loading_btn.dart';
@@ -57,7 +58,8 @@ Map<String,WidgetBuilder> demoRoutes = {
   'iconFontText': (context,{arguments}) => new IconFontText(),// IconFontText
   'screenCapture': (context,{arguments}) => new ScreenCapture(),// 截屏
   'webSocketTest': (context,{arguments}) => new WebSocketTest(),// 层叠卡片
-  'loadingBtn': (context,{arguments}) => new LoadingBtn(),// 层叠卡片
+  'loadingBtn': (context,{arguments}) => new LoadingBtn(),// 加载按钮
+  'IndexedStackPage': (context,{arguments}) => new IndexedStackPage(),// IndexedStack
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),

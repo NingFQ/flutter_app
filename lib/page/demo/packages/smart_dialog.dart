@@ -21,20 +21,20 @@ class _SmartDialogWidgetState extends State<SmartDialogWidget> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            RaisedButton(
+            ElevatedButton(
               child: Text('网络提示 toast'),
               onPressed: () {
                 NetWork.showNetWorkHint(context);
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('关闭网络提示 toast'),
               onPressed: () {
                 SmartDialog.dismiss();
                 // NetWork.hideNetWorkHint();
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('SmartDialog.show'),
               onPressed: () {
                 SmartDialog.show(
@@ -48,7 +48,7 @@ class _SmartDialogWidgetState extends State<SmartDialogWidget> {
                 );
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('showLoading'),
               onPressed: () async{
                 SmartDialog.showLoading();

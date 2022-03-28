@@ -126,7 +126,7 @@ Tap me i have a huge text''', style: TextStyle(color: Colors.white)),
 //     return Container(
 //       width: 200,
 //       height: 80,
-//       child: RaisedButton(
+//       child: ElevatedButton(
 //         shape: BeveledRectangleBorder(
 //           borderRadius: BorderRadius.circular(4),
 //         ),

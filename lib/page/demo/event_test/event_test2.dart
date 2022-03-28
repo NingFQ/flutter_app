@@ -16,7 +16,7 @@ class _EventTest2State extends State<EventTest2> {
       child: Container(
           color: Colors.deepOrange,
           child: Center(
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {
                 eventBus.fire(new ProductContentEvent('我收到广播事件了'));
               },

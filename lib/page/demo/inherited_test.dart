@@ -74,7 +74,7 @@ class _InheritedTestState extends State<InheritedTest> {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: _TestWidget(),//子widget中依赖ShareDataWidget
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text("Increment"),
                 //每点击一次，将count自增，然后重新build,ShareDataWidget的data将被更新
                 onPressed: () => setState(() => ++count),
