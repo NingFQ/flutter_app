@@ -23,14 +23,16 @@ class _DemoPageState extends State<DemoPage> {
             ),
             onPressed: () async {
               showBottomBar(
+                context,
+                [
+                  {'key': 'light', 'title': '浅色', 'viceTitle': 'LIGHT'},
+                  {'key': 'dark', 'title': '深色', 'viceTitle': 'DARK'}
+                ],
+                callBack: (item) => Provider.of<SystemThemeProvider>(
                   context,
-                  [
-                    {'key': 'light', 'title': '浅色', 'viceTitle': 'LIGHT'},
-                    {'key': 'dark', 'title': '深色', 'viceTitle': 'DARK'}
-                  ],
-                  callBack: (item) =>
-                      Provider.of<SystemThemeProvider>(context, listen: false)
-                          .switchTheme(item));
+                  listen: false,
+                ).switchTheme(item),
+              );
             },
           ),
         ],

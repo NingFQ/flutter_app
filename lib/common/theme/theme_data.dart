@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
 class AppThemeData {
-
   // 字号
   static final double _titleFontSize = 18;
 
@@ -14,8 +12,13 @@ class AppThemeData {
       headline6: TextStyle(
         color: Colors.black,
         fontSize: _titleFontSize,
-        fontWeight: FontWeight.w500
-      )
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.blueGrey),
+      ),
     ),
     appBarTheme: AppBarTheme(
       color: Colors.white,
@@ -33,7 +36,6 @@ class AppThemeData {
     ),
   );
 
-
   // 暗黑主题
   static ThemeData darkTheme = ThemeData(
     primaryColor: Colors.white,
@@ -42,15 +44,20 @@ class AppThemeData {
       headline6: TextStyle(
         color: Colors.white,
         fontSize: _titleFontSize,
-        fontWeight: FontWeight.w500
-      )
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.grey),
+      ),
     ),
     appBarTheme: AppBarTheme(
       color: Colors.black,
       elevation: 2,
       brightness: Brightness.dark,
       iconTheme: IconThemeData(
-          color: Colors.white,
+        color: Colors.white,
       ),
       actionsIconTheme: IconThemeData(
         color: Colors.white,
