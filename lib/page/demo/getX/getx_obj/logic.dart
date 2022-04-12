@@ -1,12 +1,10 @@
 import 'package:get/get.dart';
 
-
-class User{
+class User {
   User({this.name = 'test', this.age = 0});
   String name;
   int age;
 }
-
 
 class GetXObjLogic extends GetxController {
   /// 声明用户信息
@@ -19,7 +17,5 @@ class GetXObjLogic extends GetxController {
     //   user.age = 18;
     // });
     user(User(name: 'Jonny', age: 35));
-    update();
   }
-
 }

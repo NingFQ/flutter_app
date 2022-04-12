@@ -18,6 +18,7 @@ class CounterPage extends StatelessWidget {
         //   ),
         // ),
         child: GetBuilder<CounterLogic>(
+          assignId: true,
           builder: (logic) => Text(
             '点击了 ${logic.count} 次',
             style: TextStyle(fontSize: 30.0),
