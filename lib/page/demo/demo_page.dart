@@ -150,7 +150,11 @@ class _DemoPageState extends State<DemoPage> {
                     ),
                     ElevatedButton(
                       onPressed: () => routePush('pageOnePage'),
-                      child: Text('GetXCounter'),
+                      child: Text('GetX跨页面'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () => routePush('counterProPage'),
+                      child: Text('GetX进阶'),
                     ),
                     ElevatedButton(
                       onPressed: () => routePush('listApi'),

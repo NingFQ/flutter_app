@@ -8,6 +8,7 @@ import 'package:flutter_app/page/demo/event_test/event_test.dart';
 import 'package:flutter_app/page/demo/future_builder_test.dart';
 import 'package:flutter_app/page/demo/gesture_drag_test.dart';
 import 'package:flutter_app/page/demo/getX/counter/view.dart';
+import 'package:flutter_app/page/demo/getX/counter_pro/view.dart';
 import 'package:flutter_app/page/demo/getX/cross_page/page_one/view.dart';
 import 'package:flutter_app/page/demo/getX/cross_page/page_two/view.dart';
 import 'package:flutter_app/page/demo/getX/getx_obj/view.dart';
@@ -68,6 +69,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'getXObjPage': (context,{arguments}) => new GetXObjPage(),// getX修改obj类型的数据
   'pageOnePage': (context,{arguments}) => new PageOnePage(),
   'pageTwoPage': (context,{arguments}) => new PageTwoPage(),
+  'counterProPage': (context,{arguments}) => new CounterProPage(),// getX 进阶
   // 数组方法
   'listApi': (context,{arguments}) => new ListApi(),// 数组方法
 };

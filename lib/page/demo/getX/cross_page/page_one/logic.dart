@@ -8,7 +8,7 @@ class PageOneLogic extends GetxController {
   }
 
   void increase() {
-    print(count);
+    print('页面一的次数count====$count');
     count = ++count;
     update();
   }

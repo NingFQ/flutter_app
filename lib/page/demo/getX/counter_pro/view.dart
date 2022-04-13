@@ -9,6 +9,22 @@ class CounterProPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: const Text('计数器-进阶版')),
+      body: Center(
+        child: GetBuilder<CounterProLogic>(
+          builder: (logic) {
+            return Text(
+              '点击了 ${state.count} 次',
+              style: TextStyle(fontSize: 30.0),
+            );
+          },
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => logic.increase(),
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }
