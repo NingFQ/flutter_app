@@ -98,11 +98,11 @@ class _DemoPageState extends State<DemoPage> {
                     ),
                     ElevatedButton(
                       onPressed: () => routePush('animationTest1'),
-                      child: Text('动画1'),
+                      child: Text('Tween动画'),
                     ),
                     ElevatedButton(
                       onPressed: () => routePush('animationTest2'),
-                      child: Text('动画2'),
+                      child: Text('Curve动画'),
                     ),
                     ElevatedButton(
                       onPressed: () => routePush('inheritedTest'),

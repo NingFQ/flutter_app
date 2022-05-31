@@ -31,7 +31,7 @@ dependencies:
   event_bus: ^2.0.0 # 事件广播
   flutter_screenutil: ^5.0.0+2 # 屏幕尺寸适配
   flutter_smart_dialog: 2.1.6 # 可交互dialog
-  record_mp3: 3.0.0 # 音频录制
+  # record_mp3: 3.0.0 # 音频录制
   permission_handler: 8.1.4+2 # 权限获取
   audioplayers: ^0.19.1 # 音频播放
 #  flutter_audio_recorder: ^0.5.5 #录音2
