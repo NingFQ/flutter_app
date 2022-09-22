@@ -17,6 +17,7 @@ import 'package:flutter_app/page/demo/indexed_stack/Indexed_stack.dart';
 import 'package:flutter_app/page/demo/inherited_test.dart';
 import 'package:flutter_app/page/demo/list_api.dart';
 import 'package:flutter_app/page/demo/loading_btn.dart';
+import 'package:flutter_app/page/demo/nested_scroll_view.dart';
 import 'package:flutter_app/page/demo/notification.dart';
 import 'package:flutter_app/page/demo/page_storage_test/scroll_position_record.dart';
 import 'package:flutter_app/page/demo/proportion_paint.dart';
@@ -28,6 +29,7 @@ import 'package:flutter_app/page/demo/packages/smart_dialog.dart';
 import 'package:flutter_app/page/demo/screen_capture.dart';
 import 'package:flutter_app/page/demo/scroll_addListener.dart';
 import 'package:flutter_app/page/demo/scroll_controller.dart';
+import 'package:flutter_app/page/demo/skeleton_text.dart';
 import 'package:flutter_app/page/demo/stream_builder_test.dart';
 import 'package:flutter_app/page/demo/tab_style.dart';
 import 'package:flutter_app/page/demo/web_socket.dart';
@@ -45,6 +47,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'smartDialog': (content,{arguments}) => new SmartDialogWidget(),// smart dialog
   // 'recorderAudioPlay': (content,{arguments}) => new RecorderAudioPlay(),// 音频录制
   // 'recordMp3AudioPlay': (content,{arguments}) => new RecordMp3AudioPlay(),// 音频录制
+  'skeletonText': (content,{arguments}) => new SkeletonText(),// 骨架屏
   // 组件测试
   'tabStyleTest': (content,{arguments}) => new TabStyleTest(),
   'customScrollViewTest': (context,{arguments}) => new CustomScrollViewTest(),// 滚动
@@ -61,6 +64,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'webSocketTest': (context,{arguments}) => new WebSocketTest(),// 层叠卡片
   'loadingBtn': (context,{arguments}) => new LoadingBtn(),// 加载按钮
   'IndexedStackPage': (context,{arguments}) => new IndexedStackPage(),// IndexedStack
+  'NestedScrollView': (context,{arguments}) => new NestedScrollViewTest(), // NestedScrollView
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),

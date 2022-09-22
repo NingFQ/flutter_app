@@ -302,6 +302,12 @@
       "languageVersion": "2.6"
     },
     {
+      "name": "skeleton_text",
+      "rootUri": "file:///Users/ningfangqiang/flutter_sdk/flutter_2.5.3/.pub-cache/hosted/pub.flutter-io.cn/skeleton_text-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/ningfangqiang/flutter_sdk/flutter_2.5.3/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -392,7 +398,7 @@
       "languageVersion": "2.5"
     }
   ],
-  "generated": "2022-05-31T02:00:41.508124Z",
+  "generated": "2022-08-19T06:03:16.570327Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }

@@ -17,7 +17,7 @@ class _IconFontTextState extends State<IconFontText> {
               0xe64b,
               fontFamily: 'iconfont',
             ),
-            color: Colors.orangeAccent,
+            color: Colors.blue,
             size: 40.0,
           ),
           Icon(

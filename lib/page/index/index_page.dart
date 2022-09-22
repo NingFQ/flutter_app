@@ -28,14 +28,18 @@ class _IndexPageState extends State<IndexPage> {
       });
     actionSubscription = eventBus.on<RefreshIndex>().listen((event) {
       SmartDialog.showToast('刷新', alignment: Alignment.bottomCenter);
-      _controller.animateTo(0,
-          duration: Duration(milliseconds: 200), curve: Curves.easeInSine);
+      _controller.animateTo(
+        0,
+        duration: Duration(milliseconds: 200),
+        curve: Curves.easeInSine,
+      );
     });
   }
 
   @override
   void dispose() {
     actionSubscription.cancel();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -47,25 +51,23 @@ class _IndexPageState extends State<IndexPage> {
       ),
       body: Container(
         padding: EdgeInsets.all(10),
-        child: Scrollbar(
-          child: SingleChildScrollView(
-            controller: _controller,
-            child: Column(
-              children: [
-                Container(
-                  color: Colors.green,
-                  height: 0.5.sh,
-                ),
-                Container(
-                  color: Colors.red,
-                  height: 0.5.sh,
-                ),
-                Container(
-                  color: Colors.greenAccent,
-                  height: 0.5.sh,
-                ),
-              ],
-            ),
+        child: SingleChildScrollView(
+          controller: _controller,
+          child: Column(
+            children: [
+              Container(
+                color: Colors.green,
+                height: 0.5.sh,
+              ),
+              Container(
+                color: Colors.red,
+                height: 0.5.sh,
+              ),
+              Container(
+                color: Colors.greenAccent,
+                height: 0.5.sh,
+              ),
+            ],
           ),
         ),
       ),

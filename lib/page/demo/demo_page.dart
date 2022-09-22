@@ -85,6 +85,10 @@ class _DemoPageState extends State<DemoPage> {
                       child: Text('CustomScroll'),
                     ),
                     ElevatedButton(
+                      onPressed: () => routePush('NestedScrollView'),
+                      child: Text('NestedScroll'),
+                    ),
+                    ElevatedButton(
                       onPressed: () => routePush('scrollControllerTest'),
                       child: Text('ScrollController'),
                     ),
@@ -163,6 +167,10 @@ class _DemoPageState extends State<DemoPage> {
                     ElevatedButton(
                       onPressed: () => routePush('IndexedStackPage'),
                       child: Text('IndexedStack'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () => routePush('skeletonText'),
+                      child: Text('Skeleton'),
                     ),
                   ],
                 ),
