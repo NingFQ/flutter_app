@@ -33,6 +33,7 @@ import 'package:flutter_app/page/demo/skeleton_text.dart';
 import 'package:flutter_app/page/demo/stream_builder_test.dart';
 import 'package:flutter_app/page/demo/tab_style.dart';
 import 'package:flutter_app/page/demo/web_socket.dart';
+import 'package:flutter_app/page/demo/willPopScope_test.dart';
 
 
 
@@ -65,6 +66,7 @@ Map<String,WidgetBuilder> demoRoutes = {
   'loadingBtn': (context,{arguments}) => new LoadingBtn(),// 加载按钮
   'IndexedStackPage': (context,{arguments}) => new IndexedStackPage(),// IndexedStack
   'NestedScrollView': (context,{arguments}) => new NestedScrollViewTest(), // NestedScrollView
+  'WillPopScopeTest': (context,{arguments}) => new WillPopScopeTest(), // WillPopScopeTest
   // 动画测试
   'animationTest1': (context,{arguments}) => new AnimationTest1(),
   'animationTest2': (context,{arguments}) => new AnimationTest2(),

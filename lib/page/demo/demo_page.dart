@@ -172,6 +172,10 @@ class _DemoPageState extends State<DemoPage> {
                       onPressed: () => routePush('skeletonText'),
                       child: Text('Skeleton'),
                     ),
+                    ElevatedButton(
+                      onPressed: () => routePush('WillPopScopeTest'),
+                      child: Text('WillPopScopeTest'),
+                    ),
                   ],
                 ),
               ),

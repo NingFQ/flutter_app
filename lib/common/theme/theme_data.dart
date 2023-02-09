@@ -30,6 +30,11 @@ class AppThemeData {
       actionsIconTheme: IconThemeData(
         color: Colors.black,
       ),
+      titleTextStyle: TextStyle(
+        color: Colors.black,
+        fontSize: 18,
+        fontWeight: FontWeight.w600,
+      ),
     ),
     iconTheme: IconThemeData(
       color: Colors.black,

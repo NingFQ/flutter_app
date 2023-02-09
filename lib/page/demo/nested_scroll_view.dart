@@ -25,7 +25,7 @@ class _NestedScrollViewTestState extends State<NestedScrollViewTest>
   @override
   void dispose() {
     // TODO: implement dispose
-    _controller.dispose();
+    _controller?.dispose();
     _tabController.dispose();
     super.dispose();
   }
