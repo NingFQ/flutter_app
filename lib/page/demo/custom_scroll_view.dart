@@ -15,17 +15,17 @@ class _CustomScrollViewTestState extends State<CustomScrollViewTest> {
       child: CustomScrollView(
         slivers: <Widget>[
           //AppBar，包含一个导航栏
-          // SliverAppBar(
-          //   pinned: false,
-          //   expandedHeight: 250.0,
-          //   flexibleSpace: FlexibleSpaceBar(
-          //     title: const Text('Demo'),
-          //     background: Image.asset(
-          //       "assets/img/img1.jpeg",
-          //       fit: BoxFit.cover,
-          //     ),
-          //   ),
-          // ),
+          SliverAppBar(
+            pinned: false,
+            expandedHeight: 250.0,
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text('Demo'),
+              background: Image.asset(
+                "assets/img/img1.jpeg",
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           SliverPersistentHeader(
             pinned: true,
             delegate: MySliverPersistentHeaderDelegate(),
